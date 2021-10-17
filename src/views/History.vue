@@ -1,20 +1,20 @@
 <template>
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col-12">
-        <RequestList />
+        <HistoryList />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import RequestList from "@/components/RequestList";
+import HistoryList from "@/components/HistoryList";
 
 export default {
   name: "Home",
   components: {
-    RequestList,
+    HistoryList,
   },
 };
 </script>

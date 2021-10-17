@@ -1,30 +1,113 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <Header />
+  <router-view />
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+:root {
+  --bs-dark-rgb: 33, 33, 33 !important;
+  --purple: #9314ff;
+  --yellow: #f9ac1b;
+  --pink: #ec0868;
+}
+.nav-tabs {
+  border-bottom: 0px solid var(--yellow) !important;
+}
+.nav-tabs .nav-link {
+  background: #2b2b2b !important;
+  color: white !important;
+  border: 0px solid var(--yellow) !important;
+  margin-bottom: 0px !important;
+  margin-right: 3px !important;
+}
+.nav-link.active {
+  color: #000000 !important;
+  background-color: var(--yellow) !important;
+}
+.nav-link.active.secondary {
+  background-color: var(--purple) !important;
+  color: #fff !important;
+}
+.nav-link.pink {
+  background-color: var(--pink) !important;
+  color: #fff !important;
 }
 
-#nav {
-  padding: 30px;
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  border-bottom: 0px solid var(--yellow) !important;
+  isolation: isolate;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.btn-outline-yellow {
+  color: var(--yellow) !important;
+  border-color: var(--yellow) !important;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.btn-yellow {
+  color: #000 !important;
+  background-color: var(--yellow) !important;
+  border-color: var(--yellow) !important;
+}
+
+.btn-pink {
+  color: #fff !important;
+  background-color: var(--pink) !important;
+  border-color: var(--pink) !important;
+}
+
+.btn-outline-pink {
+  color: var(--pink) !important;
+  border-color: var(--pink) !important;
+}
+
+.btn-purple {
+  color: #fff !important;
+  background-color: var(--purple) !important;
+  border-color: var(--purple) !important;
+}
+
+.table > :not(:last-child) > :last-child > * {
+  border-bottom-color: currentColor !important;
+  font-weight: 600 !important;
+  color: var(--yellow) !important;
+}
+#status > span > span {
+  color: #3ec300;
+}
+.form-control.dark {
+  color: #d5d5d5 !important;
+  background-color: #212121 !important;
+  border: 1px solid #3a3a3a !important;
+}
+
+.form-control:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem rgb(58 58 58 / 49%) !important;
+}
+
+.tab-pane {
+  /* border-left: 1px solid var(--yellow);
+  border-right: 1px solid var(--yellow);
+  border-bottom: 1px solid var(--yellow); */
+  border-radius: 0px 0px 5px 5px;
+  border: 1px dashed var(--yellow);
+  padding: 10px;
+}
+
+.tab-pane.secondary {
+  /* border-left: 1px solid var(--yellow);
+  border-right: 1px solid var(--yellow);
+  border-bottom: 1px solid var(--yellow); */
+  border-radius: 0px 0px 5px 5px;
+  border: 1px dashed var(--purple);
+  padding: 10px;
+}
+
+.nav-tabs {
+  margin-bottom: 0;
+}
+.card {
+  border: 1px dashed var(--yellow) !important;
 }
 </style>
