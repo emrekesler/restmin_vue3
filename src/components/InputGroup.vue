@@ -5,16 +5,16 @@
 
   <ul class="dropdown-menu">
     <li>
-      <a class="dropdown-item" @click="setRequestMetod('GET', tab.request)">GET</a>
+      <a class="dropdown-item" @click="setRequestMethod('GET', tab.request)">GET</a>
     </li>
     <li>
-      <a class="dropdown-item" @click="setRequestMetod('POST', tab.request)">POST</a>
+      <a class="dropdown-item" @click="setRequestMethod('POST', tab.request)">POST</a>
     </li>
     <li>
-      <a class="dropdown-item" @click="setRequestMetod('PUT', tab.request)">PUT</a>
+      <a class="dropdown-item" @click="setRequestMethod('PUT', tab.request)">PUT</a>
     </li>
     <li>
-      <a class="dropdown-item" @click="setRequestMetod('DELETE', tab.request)">DELETE</a>
+      <a class="dropdown-item" @click="setRequestMethod('DELETE', tab.request)">DELETE</a>
     </li>
   </ul>
   <input type="text" class="form-control dark" placeholder="Enter request URL" v-model="requestUrl" />
@@ -58,8 +58,8 @@ export default {
     },
   },
   methods: {
-    setRequestMetod(method, request) {
-      this.$store.commit("setRequestMetod", { method, request });
+    setRequestMethod(method, request) {
+      this.$store.commit("setRequestMethod", { method, request });
     },
     send(tab) {
       this.sendRequest(tab);
